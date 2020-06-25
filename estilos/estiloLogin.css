@@ -1,0 +1,108 @@
+body {
+    width:262px; 
+    height:261px; 
+    float: left;
+    margin-top: 95px;
+    margin-right: 30px;
+    margin-left: 200px;
+}
+.label{
+    width:160px;
+    background-color:#faf6f6;
+    border: 1px solid rgb(7, 7, 7);
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 240px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+@font-face{
+    font-family: Lobster;
+    src: url("Lobster/Lobster\ 1.4.otf");
+}
+
+@font-face{
+    font-family: Pacifico;
+    src: url("Pacifico/Pacifico.ttf");
+}
+
+.text_1{
+    color:#40E0D0;
+    height: 30px;
+    width: 160px;
+    position: relative;
+    top: 20px;
+    left: 50px;
+    right: 50px;
+    font-weight:bold;
+    font-size:40px;
+    font-family: Pacifico;
+}
+
+.text_2{
+    color:#000000;
+    height: 20px;
+    width: 160px;
+    position: relative;
+
+    top: 20px;
+    left: 45px;
+    font-weight:bold;
+    font-size:40px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.text_3{
+    color:#000000;
+    height: 60px;
+    width: 160px;
+    position: relative;
+    top: 20px;
+    left: 45px;
+    font-weight:bold;
+    font-size:20px;
+    font-family: Pacifico;
+    
+}
+
+.text_4{
+    color:#40E0D0;
+    height: 20;
+    width: 160px;
+    position: relative;
+    top: 0px;
+    left: 50px;
+    font-weight:bold;
+    font-size:15px;
+    font-family: 'Times New Roman', Times, serif;
+    
+}
+
+    
+.button_1 {
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 240px;
+    text-align: center;
+    border: 1px solid rgb(64, 224, 208);
+    background-color: #40E0D0;
+    font-size: 14px;
+    font-weight:bold;
+}
+
+.button_2 {
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 160px;
+    left: 50px;
+    text-align: center;
+    border: 1px solid rgb(64, 224, 208);
+    background-color: #ddf504;
+    font-size: 14px;
+    font-weight:bold;
+}

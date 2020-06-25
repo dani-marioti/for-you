@@ -1,0 +1,115 @@
+html, body {
+    padding: 0px;
+    margin: 0px;
+    background-color: #e6fffb;
+}
+.alignCenterX {
+    margin-left: auto;
+    margin-right: auto;
+}
+.alignCenterY {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.container {
+    width: 900px;
+}
+
+/* HEADER */
+
+.headerWrapper {
+    width: 100%;
+}
+.header {
+    background-color: white;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 2px solid rgb(54, 181, 212);
+    border-radius: 10px;
+    display: flex;
+    align-items: flex-start;
+}
+.formProcurar {
+    margin-left: 78px;
+}
+.inputSearch {
+    width: 250px;
+    height: 35px;
+    border-radius: 10px;
+    border: 2px solid #17dada;
+    padding-left: 10px;
+}
+.icon {
+    width: 35px;
+    cursor: pointer;
+    margin: 7px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.iconSearch {
+    margin-right: 20px;
+}
+.iconMessage {
+    width: 60px;
+}
+
+/* CONTENT */
+
+
+.contentWrapper {
+    width: 100%;
+}
+.content {
+    margin-top: 10px;
+    padding: 10px;
+    border: 2px solid rgb(54, 181, 212);
+    border-radius: 10px;
+    background-color: white;
+    min-height: 500px;
+    display: flex;
+}
+.contentLeft, .contentCenter, .contentRight {
+    width: 100%;
+    height: 300px;
+    margin: 5px;
+    background-color: #e0e0e0;
+}
+.contentLeft {
+    flex: 2;
+}
+.contentCenter {
+    flex: 6;
+    display: grid;
+}
+.contentRight {
+    flex: 2;
+}
+.buttonPlus {
+    border: 0;
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    background-color: #00d8e1;
+    font-size: 55px;
+    padding: 0;
+    line-height: 0;
+    color: aliceblue;
+    cursor: pointer;
+}
+.buttonPlus:hover {
+    background-color: #01bac0;
+}
+.modal {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-color: lightgray;
+    border-radius: 15px;
+    width: 300px;
+    height: 200px;
+}
+.openModal {
+    display: block;
+}
