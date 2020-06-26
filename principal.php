@@ -38,21 +38,51 @@
 				<div class="contentWrapper">
 					<div class="content">
 						<div class="contentLeft">
-							
+							<img class="profilePhoto" src="imagens/perfil.jpg" alt="perfil" />
+							<h2>Sheik</h2>
 						</div>
 						<div class="contentCenter">
-							<button class="buttonPlus alignCenterX" onclick="changeModal()">+</button>
+							<?php include('content.php') ?>
 						</div>
-						<div class="contentRight">
-							
-						</div>
+						<div class="contentRight"></div>
 					</div>
 				</div>
 			</div>
 		</div>
 
 		<div id="modal" class="modal">
-			<button onclick="changeModal()">X</button>
+			<div class="closeRow">
+				<button onclick="changeModal()">X</button>
+			</div>
+			<div class="row firstRow">
+				<a href="#">
+					<button class="buttonCircle modalButton alignCenterX">
+						<img src="imagens/localizacao.png" class="buttonLocalizacao" alt="Localização" />
+					</button>
+				</a>
+				<a href="#">
+					<button class="buttonCircle modalButton alignCenterX">
+						<img src="imagens/imagem.png" class="buttonImagem" alt="Imagem" />
+					</button>
+				</a>
+				<a href="#">
+					<button class="buttonCircle modalButton alignCenterX">
+						<img src="imagens/video.png" class="buttonVideo" alt="Vídeo" />
+					</button>	
+				</a>
+			</div>
+			<div class="row">
+				<a href="#">
+					<button class="buttonCircle modalButton alignCenterX">
+						<img src="imagens/musica.png" class="buttonMusica" alt="Música" />
+					</button>
+				</a>
+				<a href="#">
+					<button class="buttonCircle modalButton alignCenterX">
+						<img src="imagens/livros.png" class="buttonLivros" alt="Livros" />
+					</button>
+				</a>
+			</div>
 		</div>
 	</body>
 </html>

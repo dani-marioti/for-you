@@ -2,6 +2,7 @@ html, body {
     padding: 0px;
     margin: 0px;
     background-color: #e6fffb;
+    font-family: Arial, Helvetica;
 }
 .alignCenterX {
     margin-left: auto;
@@ -13,6 +14,15 @@ html, body {
 }
 .container {
     width: 900px;
+}
+.buttonCircle {
+    border: 0;
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    padding: 0;
+    line-height: 0;
+    cursor: pointer;
 }
 
 /* HEADER */
@@ -56,13 +66,20 @@ html, body {
 
 /* CONTENT */
 
-
+.profilePhoto {
+    width: 130px;
+    border-radius: 100%;
+    border: 3px solid #36b5d4;
+    margin-top: 10px;
+}
 .contentWrapper {
     width: 100%;
 }
 .content {
     margin-top: 10px;
-    padding: 10px;
+    margin-bottom: 30px;
+    padding-top: 20px;
+    padding-bottom: 20px;
     border: 2px solid rgb(54, 181, 212);
     border-radius: 10px;
     background-color: white;
@@ -71,12 +88,14 @@ html, body {
 }
 .contentLeft, .contentCenter, .contentRight {
     width: 100%;
-    height: 300px;
     margin: 5px;
-    background-color: #e0e0e0;
 }
 .contentLeft {
+    height: 300px;
     flex: 2;
+    text-align: center;
+    border-right: 1px solid #d8d8d8;
+    margin-left: 0;
 }
 .contentCenter {
     flex: 6;
@@ -86,16 +105,9 @@ html, body {
     flex: 2;
 }
 .buttonPlus {
-    border: 0;
-    width: 60px;
-    height: 60px;
-    border-radius: 100%;
     background-color: #00d8e1;
     font-size: 55px;
-    padding: 0;
-    line-height: 0;
     color: aliceblue;
-    cursor: pointer;
 }
 .buttonPlus:hover {
     background-color: #01bac0;
@@ -105,11 +117,94 @@ html, body {
     position: absolute;
     top: 50%;
     left: 50%;
-    background-color: lightgray;
+    text-align: center;
+    background-color: #fbcfec;;
     border-radius: 15px;
     width: 300px;
-    height: 200px;
+    min-height: 200px;
+    margin-left: -150px;
+    margin-top: -100px;
+    box-shadow: 0px 0px 10px 1px #845280;
 }
 .openModal {
     display: block;
+}
+.row {
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+}
+.firstRow {
+    margin-top: 6px;
+}
+.modalButton {
+    margin-left: 5px;
+    margin-right: 5px;
+    box-shadow: 0px 0px 3px 1px white;
+    background-color: whitesmoke;
+}
+.modalButton:hover {
+    background-color: rgb(209, 209, 209);
+    box-shadow: 0px 0px 3px 1px rgb(117, 117, 117);
+}
+.buttonLocalizacao {
+    width: 25px;
+}
+.buttonImagem {
+    width: 30px;
+}
+.buttonVideo {
+    width: 30px;
+}
+.buttonMusica {
+    width: 30px;
+}
+.buttonLivros {
+    width: 30px;
+}
+.closeRow {
+    width: 100%;
+    text-align: right;
+}
+.closeRow button {
+    font-size: 17px;
+    margin-top: 8px;
+    margin-right: 9px;
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+}
+.post {
+    margin-top: 15px;
+    padding-bottom: 15px;
+    width: 90%;
+    border: 1px solid gray;
+    text-align: center;
+    border: 1px solid #d8d8d8;
+    border-radius: 15px;
+}
+.postImage {
+    width: 100%;
+    text-align: center;
+}
+.postImage img {
+    border: 2px solid gray;
+    max-width: 300px;
+}
+.postActions {
+    width: 300px;
+    text-align: left;
+    margin-top: 7px;
+}
+.actionIcon {
+    width: 30px;
+    cursor: pointer;
+}
+.rowComment {
+    display: block;
+}
+.buttonComment {
+    margin-top: 10px;
 }
