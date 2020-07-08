@@ -60,7 +60,7 @@
 						<img src="imagens/localizacao.png" class="buttonLocalizacao" alt="Localização" />
 					</button>
 				</a>
-				<a href="#">
+				<a href="form-image.php">
 					<button class="buttonCircle modalButton alignCenterX">
 						<img src="imagens/imagem.png" class="buttonImagem" alt="Imagem" />
 					</button>
