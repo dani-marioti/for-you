@@ -1,3 +1,13 @@
+<?php
+    include "conexao.php";
+    
+    $sqlBuscaPosts = 'select id, usu.usuNome as usuNome, image_name from post, usu where post.id_usuario = usu.usuCodigo';
+    $posts = mysqli_query($conexao, $sqlBuscaPosts);
+    
+    $sqlBuscaBooks = 'select title, author from books';
+    $books = mysqli_query($conexao, $sqlBuscaBooks);
+?>
+
 <script type="text/javascript">
 	function changeModalComment() {
 		const list = document.getElementById('modalComment').classList
@@ -10,26 +20,39 @@
 	}
 </script>
 
-<button class="buttonCircle buttonPlus alignCenterX" onclick="changeModal()">+</button>
+<button class="buttonCircle buttonPlus alignCenterX" onclick="changeModal()">
+    +
+</button>
 
-<?php
-    $posts = [];
-    // for (post in posts) {
-        $postId = "1";
-        $nome = "Daniela Marioti";
-        $imagemUrl = "imagens/backgroundLogin.jpg";
-?>
+<?php foreach ($posts as $post) : ?>
+    <div class="post alignCenterX">
+        <h3>
+            <?php echo $post['usuNome']; ?>
+        </h3>
+        <div class="postImage">
+            <img src="imagens/upload/<?php echo $post['image_name'] ?>">
+        </div>
+        <div class="postActions alignCenterX">
+            <img class="actionIcon" src="imagens/coracao.png" alt="Curtir" />
+            <img class="actionIcon" src="imagens/comentar.png" alt="Comentar" onclick="changeModalComment()" />
+        </div>
+    </div>
+<?php endforeach; ?>
 
-<div class="post alignCenterX">
-    <h3><?php echo $nome ?></h3>
-    <div class="postImage">
-        <img src="<?php echo $imagemUrl ?>">
+<?php foreach ($books as $book) : ?>
+    <div class="post alignCenterX">
+        <h3>
+            <?php echo $book['title']; ?>
+        </h3>
+        <h4>
+            Autor: <?php echo $book['author']; ?>
+        </h4>
+        <div class="postActions alignCenterX">
+            <img class="actionIcon" src="imagens/coracao.png" alt="Curtir" />
+            <img class="actionIcon" src="imagens/comentar.png" alt="Comentar" onclick="changeModalComment()" />
+        </div>
     </div>
-    <div class="postActions alignCenterX">
-        <img class="actionIcon" src="imagens/coracao.png" alt="Curtir" />
-        <img class="actionIcon" src="imagens/comentar.png" alt="Comentar" onclick="changeModalComment()" />
-    </div>
-</div>
+<?php endforeach; ?>
 
 <div id="modalComment" class="modal">
     <div class="closeRow">
