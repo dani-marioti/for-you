@@ -10,13 +10,13 @@
         $tmp_name = $_FILES["image"]["tmp_name"];
         $file = $directory.basename($imageName);
         
-        $sql = "`post` (`id`, `id_usuario`, `image_name`) VALUES (NULL, '$userId', '$imageName')";
+        $sql = 'insert into post (id_usuario, image_name) VALUES ('.$userId.', "'.$imageName.'")';
         $resultado = $conexao->query($sql);
         
         if ($resultado === TRUE AND move_uploaded_file($tmp_name, $file)) {
-            echo "Post cadastrado com sucesso!";
+            $msg = "Post cadastrado com sucesso!";
         } else {
-            echo "Erro: ".$sql."<br>".$conexao->error;
+            $msg = "Erro: ".$sql."<br>".$conexao->error;
         }
     }
 ?>
@@ -30,8 +30,7 @@
     <?php if ($_FILES and $resultado === TRUE) { ?>
         <br/>
         <img src="imagens/upload/<?php echo $imageName ?>" width="80" height="80" />
-        <h3>Post realizado com sucesso!</h3>
-        <a href="principal.php">Página principal</a>
+        <h3><?php echo $msg; ?></h3>
         <br/><hr/>
         <h4>Ou realize outra postagem:</h4>
     <?php } ?>
@@ -41,5 +40,8 @@
         <input name='image' type='file' accept="image/png, image/jpeg" />
         <p><input type="submit" value="Postar" /></p>
     </form>
+
+    <br/>
+    <a href="principal.php">Página principal</a>
 </body>
 </html>
