@@ -36,7 +36,7 @@
     <?php } ?>
 
     <form enctype="multipart/form-data" action="form-image.php" method="post">
-        <h4>Selecione a imagem a ser compartilhada:</h4>
+        <h4>Onde você está, agora?</h4>
         <input name='image' type='file' accept="image/png, image/jpeg" />
         <p><input type="submit" value="Postar" /></p>
     </form>

@@ -38,7 +38,7 @@
 				<div class="contentWrapper">
 					<div class="content">
 						<div class="contentLeft">
-							<img class="profilePhoto" src="imagens/perfil.jpg" alt="perfil" />
+							<img class="profilePhoto" src="imagens/fotoPerfil.jpg" alt="perfil" />
 							<h2>Sheik</h2>
 						</div>
 						<div class="contentCenter">
@@ -55,7 +55,7 @@
 				<button onclick="changeModal()">X</button>
 			</div>
 			<div class="row firstRow">
-				<a href="#">
+				<a href="form-location.php">
 					<button class="buttonCircle modalButton alignCenterX">
 						<img src="imagens/localizacao.png" class="buttonLocalizacao" alt="Localização" />
 					</button>
@@ -65,19 +65,19 @@
 						<img src="imagens/imagem.png" class="buttonImagem" alt="Imagem" />
 					</button>
 				</a>
-				<a href="#">
+				<a href="form-movie.php">
 					<button class="buttonCircle modalButton alignCenterX">
 						<img src="imagens/video.png" class="buttonVideo" alt="Vídeo" />
 					</button>	
 				</a>
 			</div>
 			<div class="row">
-				<a href="#">
+				<a href="form-music.php">
 					<button class="buttonCircle modalButton alignCenterX">
 						<img src="imagens/musica.png" class="buttonMusica" alt="Música" />
 					</button>
 				</a>
-				<a href="#">
+				<a href="form-books.php">
 					<button class="buttonCircle modalButton alignCenterX">
 						<img src="imagens/livros.png" class="buttonLivros" alt="Livros" />
 					</button>

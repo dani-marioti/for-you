@@ -6,6 +6,9 @@
     
     $sqlBuscaBooks = 'select title, author from books';
     $books = mysqli_query($conexao, $sqlBuscaBooks);
+
+    $sqlBuscaVideo = 'select id, usu.usuNome as usuNome, movie_name from movie, usu where movie.id_usuario = usu.usuCodigo';
+    $movies = mysqli_query($conexao, $sqlBuscaVideo);
 ?>
 
 <script type="text/javascript">
@@ -47,6 +50,21 @@
         <h4>
             Autor: <?php echo $book['author']; ?>
         </h4>
+        <div class="postActions alignCenterX">
+            <img class="actionIcon" src="imagens/coracao.png" alt="Curtir" />
+            <img class="actionIcon" src="imagens/comentar.png" alt="Comentar" onclick="changeModalComment()" />
+        </div>
+    </div>
+<?php endforeach; ?>
+
+<?php foreach ($movies as $movie) : ?>
+    <div class="post alignCenterX">
+        <h3>
+            <?php echo $movie['usuNome']; ?>
+        </h3>
+        <div class="postMovie">
+            <video src="imagens/uploadMovie/<?php echo $movie['movie_name'] ?>">
+        </div>
         <div class="postActions alignCenterX">
             <img class="actionIcon" src="imagens/coracao.png" alt="Curtir" />
             <img class="actionIcon" src="imagens/comentar.png" alt="Comentar" onclick="changeModalComment()" />

@@ -3,18 +3,16 @@
     include "conexao.php";
     $erro = FALSE;
 
-    if ($_FILES) {
+    if ($_POST) {
         $userId = $_SESSION['usu'];
-        $directory = 'imagens/upload/';
-        $imageName = $_FILES['image']['name'];
-        $tmp_name = $_FILES["image"]["tmp_name"];
-        $file = $directory.basename($imageName);
         
-        $sql = "`post` (`id`, `id_usuario`, `image_name`) VALUES (NULL, '$userId', '$imageName')";
-        $resultado = $conexao->query($sql);
-        
-        if ($resultado === TRUE AND move_uploaded_file($tmp_name, $file)) {
-            echo "Post cadastrado com sucesso!";
+        $sql = "select * from books where bookId=".$codigo;			
+		$resultado = mysqli_query($conexao, $sql);
+		$bookTitle = mysqli_fetch_array($resultado);
+        $msg = "";
+
+        if ($resultado === TRUE) {
+            $msg = "Post cadastrado com sucesso!";
         } else {
             echo "Erro: ".$sql."<br>".$conexao->error;
         }
@@ -27,19 +25,30 @@
 </head>
 
 <body>
-    <?php if ($_FILES and $resultado === TRUE) { ?>
-        <br/>
-        <img src="imagens/upload/<?php echo $imageName ?>" width="80" height="80" />
-        <h3>Post realizado com sucesso!</h3>
-        <a href="principal.php">Página principal</a>
-        <br/><hr/>
-        <h4>Ou realize outra postagem:</h4>
+    <?php if ($_POST and $resultado === TRUE) { ?>
+        <br/>       
+        <h3><?php echo $msg; ?></h3>
+        <hr/>
     <?php } ?>
 
-    <form enctype="multipart/form-data" action="form-image.php" method="post">
-        <h4>Selecione sua imagem para postar:</h4>
-        <input name='image' type='file' accept="image/png, image/jpeg" />
+    <form enctype="multipart/form-data" action="form-book.php" method="post">
+        <h4>O que você está lendo?</h4>
+        <select name="cBookId" id="cBookId" <?php echo $status; ?>>	
+
+            <?php foreach( $resultado as $bookTitle) { ?>
+                <option value="<?php echo $bookTitle['bookId']; ?>" size="4"> 
+                    <?php 
+                    echo $bookTitle['title'] . " - " . $bookTitle['author']; 
+                    ?>
+                </option>
+            <?php } ?>   
+
+        </select>
+
         <p><input type="submit" value="Postar" /></p>
     </form>
+
+    <br/>
+    <a href="principal.php">Página principal</a>
 </body>
 </html>
