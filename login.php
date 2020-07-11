@@ -20,7 +20,6 @@
 <body style="text-align: center">
 	<a id="topright" href="#" title="TopRight"></a>
 	<p>
-		<img src="imagens/backgroundFy.jpg" width="60px" height="60px" style="text-align: left">
 		<h1 class="text_1" style="text-align: left">Fy</h1>
 		<h2 class="text_2">Welcome</h2>
 		<h3 class="text_3" >A place For You</h3>
